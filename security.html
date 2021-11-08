@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+		<title>Security</title>
+		<link href="Learners.css" rel="stylesheet" />
+
+	<style type="text/css">
+	
+	*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
+	
+	body{color: white; background-color:black;}
+
+	h1{font-size: 1.8rem; color: rgb(181,9,143); margin-bottom: 25px;}
+	
+	h2{ font-size: 24px; text-align: left; border: none; outline: none; margin-bottom: 25px; color: rgb(201,109,125);}
+	p{word-spacing: 2px; color: white; font-size: 16px; font-weight: 400; line-height: 1.5;}
+	
+	.grandparent{width: 100vw; height: 100vh;}
+	
+	.parent1{padding-top: 10px; width: 100vw; height: auto; margin-top: 50px;}
+
+	.parent2{margin-left:10vw; margin-right: 10vw; margin-top: 25px; padding: 5vw; background-color: rgba(240,238,255,0.1); border-radius: 8px;}
+	
+	.space{margin-bottom: 40px; }
+
+	@media (max-width: 768px){.grandparent{height: auto;}}
+
+	</style>
+</head>
+
+<body>	
+	<section
+			class="header">
+			<a href="{% url 'index' %}"><img id='logo' src="assets\logo.png" alt="logo"></a>
+			<div class="navItems">
+				<a href="##">About Us</a>
+				<a href="##">Our People</a>
+				<a href="##">Learn</a>
+				<button class="btn">Get Started</button>
+			</div>
+			<div class="Ham">
+				<img src="assets\menu.png" alt="Ham" >
+			</div>
+		</section>
+		<!-- mobile menu --------------------------------------------- -->
+<div class="dropMenu">
+	<ul>
+		<li><a href="##">About Us</a></li>
+		<li><a href="##">Our People</a></li>
+		<li><a href="##">Learn</a></li>
+		<button class="btn">Get Started</button>
+		
+	</ul>
+	<div class="Close">X</div>
+</div>
+
+<div class="grandparent">
+	<div class="parent1"></div>
+	<div class="parent2">
+		<center><h1>Tech Snap Security</h1></center>
+		<p class="space">When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.</p>
+
+		<p class="space">TechSnap uses commercially reasonable administrative, technical, and physical security safeguards that is designed to preserve the integrity protect your data and information. However, no security system is impenetrable and we cannot guarantee the security of our systems 100%. In the event that any information under our control is compromised as a result of a breach of security, we will take reasonable and appropriate steps to investigate the situation, notify those individuals whose information may have been compromised in accordance with any applicable laws and regulations, and take other steps as appropriate. Your privacy settings may also be affected by changes to the functionality of third-party sites and services that you add to the TechSnap Service, such as social networks. TechSnap is not responsible for the functionality or security measures of any third party.</p>
+
+		<p class="space">TechSnap reserves the right to modify or update this Privacy Policy from time to time to reflect the changes in our business and practices, Privacy Policy.</p>
+		<p class="space">For any queries and concerns, contact us at snapthetechqueries@gmail.com</p>
+
+</div> <br>
+	<div class="parent3">
+		<footer class="Footer_conatiner">
+	<div class="Footer_header">
+		<img src="assets\logo.png" alt="Logo" >
+		<br><br>
+		<p>We are here to endure your muddled stages of knowing the trends while pursuing UG-CSE.</p>
+		<p>We help you to know about trending jobs and required skills.</p><br>
+		<p>We will succour you in submitting your university projects as well as steer you with free tutorials.</p>
+	</div>
+	<div class="Footer_columns_holder">
+		<div class="Footer_columns">
+			<h1>Company</h1>
+			<a href="##">About us</a>
+			<a href="##">Learner stories</a>
+			<a href="##">our people</a>
+			<a href="##">jobs</a>
+		</div>
+		<div class="Footer_columns">
+			<h1>Resources</h1>
+			<a href="##">Learn</a>
+			<a href="##">Career path</a>
+			<a href="##">Internship</a>
+			<a href="##">Blogs</a>
+		</div>
+		<div class="Footer_columns">
+			<h1>Support</h1>
+			<a href="##">Contact us</a>
+			<a href="##">FAQ</a>
+			<a href="##">Any ideas, DM us</a>
+			<a href="##">Doc</a>
+		</div>
+		<div class="Footer_columns">
+			<h1>Services</h1>
+			<a href="##">Startup services</a>
+			<a href="##">Design services</a>
+			<a href="##">Projects</a>
+			<a href="##">Courses</a>
+		</div>
+	</div>
+</footer>
+<div class="Privacy_holder">
+	<div class="Privacy_links">
+		<a href="{% url 'privacy' %}">Privacy policy</a>
+		<a href="{% url 'cookies' %}">Cookies Notice</a>
+		<a href="{% url 'security' %}">Security</a>
+		<a href="{% url 'terms' %}">Terms of use</a>
+	</div>
+	<div class="Social-media">
+		<img src="assets\twitter.svg"/>
+		<img src="assets\facebook.svg"/>
+		<img src="assets\instagram.svg"/>
+	</div>
+</div>
+<div class="Scroll">
+ <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">&#9757</a>
+</div>
+		<!-- script files link here -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			// Animation------------------------------------
+			AOS.init({
+				duration: 900,
+				offset: 220,
+				easing: 'ease-in-out-quad'
+			});
+          //-----scroll-----------------
+		  const ham = document.querySelector('.Ham');
+		  const Close=document.querySelector(".Close");
+		  const DropMenu =document.querySelector('.dropMenu')
+			window.addEventListener('scroll', () => {
+		const top = window.innerHeight * (10 / 100)+300;
+		if (window.scrollY <= top) {
+			document.querySelector(".Scroll").style.display='none';
+		
+		}
+		if (window.scrollY > top) {
+				document.querySelector(".Scroll").style.display='grid';
+		}
+	});
+		ham.addEventListener('click',() => {
+			DropMenu.classList.add("MenuAnimation")
+
+		})
+		Close.addEventListener('click',() => {
+			DropMenu.classList.remove('MenuAnimation')
+
+		})
+		</script>
+	</div>
+
+
+</div>	<br><br>
+
+</body>
+</html>
